@@ -11,13 +11,13 @@ const Index = () => {
     if (isAuthenticated && user) {
       // Redirect based on user role
       switch (user.role) {
-        case 'super_admin':
+        case 'Super Admin':
           navigate('/admin');
           break;
-        case 'business_owner':
+        case 'Business Owner':
           navigate('/business');
           break;
-        case 'store_staff':
+        case 'Store Staff':
           navigate('/store');
           break;
         default:
