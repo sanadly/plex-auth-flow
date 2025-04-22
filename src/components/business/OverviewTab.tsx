@@ -1,5 +1,7 @@
+
 import { Card } from "@/components/ui/card";
-import { BusinessStatsCard } from "@/components/BusinessStatsCard";
+import BusinessStatsCard from "@/components/BusinessStatsCard";
+import { BarChart, Users, User, LineChart } from "lucide-react";
 
 export const OverviewTab = () => {
   return (
@@ -8,28 +10,29 @@ export const OverviewTab = () => {
         <BusinessStatsCard
           title="Total Revenue"
           value="$45,231.89"
-          description="+20.1% from last month"
-          illustration="chart-bar"
+          icon={BarChart}
+          trend={{ value: 20.1, isPositive: true }}
         />
         <BusinessStatsCard
           title="Subscriptions"
-          value="2350"
-          description="+180.1% from last month"
-          illustration="users"
+          value={2350}
+          icon={Users}
+          trend={{ value: 180.1, isPositive: true }}
         />
         <BusinessStatsCard
           title="Active Users"
-          value="1,234"
-          description="+19% from last month"
-          illustration="user"
+          value={1234}
+          icon={User}
+          trend={{ value: 19, isPositive: true }}
         />
         <BusinessStatsCard
           title="Sales Revenue"
           value="$45,231.89"
-          description="+20.1% from last month"
-          illustration="chart-line"
+          icon={LineChart}
+          trend={{ value: 20.1, isPositive: true }}
         />
       </div>
+      
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
         <Card className="col-span-4">
           <div className="h-[400px] p-6">
