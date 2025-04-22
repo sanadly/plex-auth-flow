@@ -16,13 +16,13 @@ const LoginPage = () => {
     // If user is already authenticated, redirect based on role
     if (isAuthenticated && user) {
       switch (user.role) {
-        case 'Super Admin':
+        case 'super_admin':
           navigate('/admin');
           break;
-        case 'Business Owner':
+        case 'business_owner':
           navigate('/business');
           break;
-        case 'Store Staff':
+        case 'store_staff':
           navigate('/store');
           break;
         default:
